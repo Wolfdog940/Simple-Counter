@@ -1,0 +1,58 @@
+import React from "react";
+import { useEffect  ,useState} from "react";
+import Card from "./Card.jsx"
+
+
+
+
+
+const counter = () => {
+
+
+	const [count,setCount]=useState(0);
+    const[ newcount,setnewcount]=useState([]);
+
+
+	useEffect(()=>{
+
+   setnewcount(count.toString().split("").reverse())
+
+
+	},[count]);
+
+
+useEffect(()=>{
+	setInterval(()=>{
+       setCount(preCount =>preCount+1);
+
+	},1000);
+
+
+  
+
+},[]);
+
+   
+
+	return (
+		<div className="text-center   d-flex  justify-content-center mt-4  mx-5px">
+
+
+
+
+		<Card number={<i className="fa-regular fa-clock"/>}/>
+		<Card number={newcount[4]}/>
+		<Card number={newcount[4]}/>
+		<Card number={newcount[3]}/>
+		<Card number={newcount[2]}/>
+		<Card number={newcount[1]}/>
+		<Card number={newcount[0]}/>
+		
+		
+		
+			
+		</div>
+	);
+};
+
+export default counter ;
