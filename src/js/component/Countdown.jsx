@@ -17,9 +17,17 @@ const countdown=()=>{
    
 
 return (
-	<div>
-	<h2>{down}</h2>
-
+	<div className="">
+	
+  <div className="row d-flex justify-content-center">
+    <Card number={<i className="fa-regular fa-clock" />} />
+        <Card number={down} />
+        <Card number={down} />
+        <Card number={down} />
+        <Card number={down} />
+        <Card number={down} />
+        <Card number={down} />
+</div>
 	
 	<input
 	  type="number"
