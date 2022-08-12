@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect  ,useState} from "react";
 import Card from "./Card.jsx"
-
+import Countdown from "./Countdown.jsx";
 
 
 
@@ -35,11 +35,10 @@ useEffect(()=>{
    
 
 	return (
-		<div className="text-center   d-flex  justify-content-center mt-4  mx-5px">
+	
 
-
-
-
+	<div className="text-center   d-flex  justify-content-center mt-4  mx-5px fixed-bottom">
+		
 		<Card number={<i className="fa-regular fa-clock"/>}/>
 		<Card number={newcount[4]}/>
 		<Card number={newcount[4]}/>
@@ -47,11 +46,7 @@ useEffect(()=>{
 		<Card number={newcount[2]}/>
 		<Card number={newcount[1]}/>
 		<Card number={newcount[0]}/>
-		
-		
-		
-			
-		</div>
+	</div>
 	);
 };
 
