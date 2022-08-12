@@ -1,9 +1,12 @@
 body{
 
-    background-image: url("https://img.freepik.com/foto-gratis/reloj-playa-tiempo-concepto-negocio_1204-346.jpg?w=2000");
-    background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vp;
+background-image: url("https://img.freepik.com/foto-gratis/reloj-playa-tiempo-concepto-negocio_1204-346.jpg?w=2000");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+font-size: 3rem;
+
+
 }
 
 .card{
@@ -23,4 +26,11 @@ body{
 i{
 
     font-size: 8vw;
+}
+input{
+    border-radius:100% ;
+    width: 8vw;
+    height: 8vw;
+    font-size: 3vw;
+    
 }
