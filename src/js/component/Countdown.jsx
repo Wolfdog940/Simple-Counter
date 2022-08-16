@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card.jsx";
+
 const countdown = () => {
   
   const [down, setDown] = useState(0);
@@ -18,7 +19,7 @@ const countdown = () => {
       let newintervalId = setInterval(() => {
         setDown((preCount) => preCount - 1);
       }, 1000);
-      setInterval(newintervalId);
+      setIntervalID(newintervalId);
     } else stopInterval();
   }, [bolean]);
 
@@ -27,6 +28,7 @@ const countdown = () => {
       setbolean(false);
       alert("la cuenta regresiva a terminado");
 	 setDown(0);
+	 
 	  
 	 
     }
@@ -34,7 +36,7 @@ const countdown = () => {
 
   const stopInterval = () => {
     clearInterval(intervalId);
-    setIntervalID(0);
+    setDown(0);
   };
 
   const cuentaAtras = () => {
@@ -42,7 +44,7 @@ const countdown = () => {
     if (inputValue.value > 0) {
       setDown((down) => (down = inputValue.value));
       setbolean(true);
-      inputValue.value = "";
+      inputValue.value = "";//para que borre el numero una vez salga en el input
     } else alert("El numero debe ser mayor que 0");
 	stopInterval;
   };
@@ -64,14 +66,14 @@ const countdown = () => {
           <button
             type="button"
             className="btn btn-success"
-            onClick={cuentaAtras}
+            onClick={() => cuentaAtras()}
           >
             setDown
           </button>
 		  <button
             type="button"
             className="btn btn-danger"
-            onClick={stopInterval}
+            onClick={() => stopInterval()}
           >
             reset
           </button>
