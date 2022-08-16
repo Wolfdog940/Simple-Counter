@@ -40,17 +40,21 @@ i{
 
     font-size: 8vw;
 }
-input{
-    text-align: center;
-    border-radius:20% ;
-    margin-left: 5px;
-    width: 8vw;
-    height: 4vw;
-    font-size: 2vw;
-    border:solid 0.5vw rgba(236, 226, 198);
-    color:rgba(216, 216, 10, 0.751);
-    background-color: rgba(236, 226, 198);
-    display: flex;
-    align-self: center;
+
+
+#inputTime{
+
+    display: inline;
+    margin-top: 540px;
+    width: 80px;
     
+
+
+
+
+
+}
+button{
+    margin-top: 540px;
+
 }
